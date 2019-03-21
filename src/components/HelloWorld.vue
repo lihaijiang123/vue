@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
+    <input type="text" v-model="msg">
     <h1>{{ msg }}</h1>
-    <Header></Header>
+    <Nav></Nav>
+    <Header :parentValue="msg"></Header>
   </div>
 </template>
 
