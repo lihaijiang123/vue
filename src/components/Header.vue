@@ -13,7 +13,7 @@
     data() {
       return {
         titles: 'hi everybody',
-        font: '我是马尔扎哈ya',
+        font: '我是马尔扎哈',
         img: []
       }
     },
