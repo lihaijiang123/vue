@@ -73,7 +73,7 @@
       this.font = 'xxxxx';
     },
     created() {
-      alert(this.parentValue)
+
     }
   }
 

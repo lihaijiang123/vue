@@ -1,21 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Header from '@/components/Header'
+import Login from '@/views/TheLogin'
+import Container from '@/container/Container'
+import Dashboard from '@/views/dashboard'
+import Article from '@/views/article'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/login',
+      name: 'Login',
+      component: Login
     },
     {
-      path: '/header',
-      name: 'Header',
-      component: Header
+      path: '/',
+      redirect: '/dashboard',
+      name: 'Container',
+      component: Container,
+      children: [
+        {path: 'dashboard', name: '首页', component: Dashboard,},
+        {path: 'article', name: '食药', component: Article,},
+      ]
     }
   ]
 })
